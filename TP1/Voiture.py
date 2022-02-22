@@ -6,25 +6,25 @@ class Voiture:
         self.__couleur = couleur
         self.__options = []
 
-    def get_modele(self):
+    def get_modele(self) -> str:
         return self.__modele
 
     def set_modele(self,modele):
         self.__modele = modele
 
-    def get_marque(self):
+    def get_marque(self) -> str:
         return self.__marque
 
     def set_marque(self, marque):
         self.__marque = marque
 
-    def get_chevaux(self):
+    def get_chevaux(self) -> int:
         return self.__chevaux
 
     def set_chevaux(self, chevaux):
         self.__chevaux = chevaux
 
-    def get_couleur(self):
+    def get_couleur(self) -> str:
         return self.__couleur
 
     def set_couleur(self, couleur):
@@ -43,11 +43,12 @@ class Voiture:
         self.__options.remove(option)
 
     def is_option(self,option):
-        if option in self.__options:
+       return option in self.__options
+       """" if option in self.__options:
             return True
         else:
             return False
-
+        """
     def __str__(self):
         msg =f"voiture de marque {self.__marque} de modéle {self.__modele} avec {self.__chevaux} chevaux et de couleur {self.__couleur} et les options suivantes: \n"
         for op in self.__options:

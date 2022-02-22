@@ -29,3 +29,8 @@ class Point:
         calc = math.sqrt((p.__x-self.__x)*(p.__x-self.__x) + (p.__y-self.__y)*(p.__y-self.__y))
         return calc
 
+    def get_x(self):
+        return self.__x
+
+    def get_y(self):
+        return self.__y
