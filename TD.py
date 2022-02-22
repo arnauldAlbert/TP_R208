@@ -43,13 +43,22 @@ def affichage(etudiants, groupe=None):
                 print(f"{num} : {etu['NOM']} note {etu['Note']}")
 
 def fichierAnonyme(etudiants, fichierOut):
+    try:
+        fout = open(fichierOut,"w")
+    except:
+        print("erreur d'accés fichier")
+    else:
+        fout.write("N° étudiant ; Notes \n")
+        for key,etu in etudiants.items():
+            ligne = key+";"+etu['Note']+"\n"
+            fout.write(ligne)
 
 def main():
     fichier = "files/un fichier de notes.txt"
     fic = ouvrir(fichier)
     if (fic != None):
-        etudiant = exploiterFichier(fic)
-        affichage(etudiant)
-
+        etudiants = exploiterFichier(fic)
+        affichage(etudiants)
+        fichierAnonyme(etudiants,"files/fichier anonyme.txt")
 if __name__ == "__main__":
     main()
