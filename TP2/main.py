@@ -1,5 +1,6 @@
 import sys
 import Patisserie as pa
+import Patissier as pat
 import pickle
 
 def main():
@@ -34,5 +35,15 @@ def main():
     p7= pa.Patisserie.chargementstatic("../files/data2.pickle")
     print (p7)
 
+    toto = pat.Patissier("Arnauld","ALBERT")
+    toto.creer_patisserie(250, "tarte")
+    toto.creer_patisserie(230, "tarte")
+    toto.creer_patisserie(289, "tarte")
+    toto.creer_patisserie(120, "tarte")
+    toto.creer_patisserie(1180, "tarte")
+
+    print (toto)
+    toto.trier_patisseries()
+    print (toto)
 if __name__ == "__main__":
         sys.exit(main())
