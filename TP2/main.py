@@ -6,7 +6,7 @@ import pickle
 def main():
     # test des deux constructeurs
     p1 = pa.Patisserie(250.6, "viennoiserie")
-    print(p1)
+    # print(p1)
     p2 = pa.Patisserie(250.6)
     p3 = pa.Patisserie(532.9, "gateau")
     p3.set_createur("Arnauld")
@@ -15,7 +15,16 @@ def main():
     print(p2)
     print(p3)
     print(p4)
-    print(f"liste des categories autorisée {pa.Patisserie.categorie_autorise()}")
+    print("\n")
+    p3.set_createur2("Arnauld")
+    p5 = pa.Patisserie(234, "Tarte")
+    print(p1)
+    print(p2)
+    print(p3)
+    print(p5)
+
+
+"""  print(f"liste des categories autorisée {pa.Patisserie.categorie_autorise()}")
     if p1==p2:
         print ("les deux patisseries sont identiques")
     else:
@@ -45,5 +54,6 @@ def main():
     print (toto)
     toto.trier_patisseries()
     print (toto)
+    """
 if __name__ == "__main__":
         sys.exit(main())

@@ -27,10 +27,10 @@ class Patisserie:
         else:
             print("la valeur saisie n'est pas un réel")
 
-    def set_createur2(self, createur):
+    def set_createur(self, createur):
         self.__createur = createur
 
-    def get_createur2(self):
+    def get_createur(self):
         return self.__createur
 
 
@@ -38,11 +38,11 @@ class Patisserie:
         self.__categorie = categorie
 
     @classmethod
-    def set_createur(cls,createur):
+    def set_createur2(cls,createur):
         cls.__createur = createur
 
     @classmethod
-    def get_createur(cls):
+    def get_createur2(cls):
         return cls.__createur
 
     def __eq__(self, other):
